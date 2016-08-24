@@ -1,17 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="3" passed="1">
+<testng-results skipped="0" failed="2" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="94286" started-at="2016-08-17T09:13:34Z" finished-at="2016-08-17T09:15:08Z">
+  <suite name="Default suite" duration-ms="25483" started-at="2016-08-24T09:49:39Z" finished-at="2016-08-24T09:50:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="94286" started-at="2016-08-17T09:13:34Z" finished-at="2016-08-17T09:15:08Z">
-      <class name="com.wangsy.doTest.LoginTest">
-        <test-method status="PASS" signature="beforeLogin()[pri:0, instance:com.wangsy.doTest.LoginTest@15bb6bea]" name="beforeLogin" is-config="true" duration-ms="52904" started-at="2016-08-17T17:13:34Z" finished-at="2016-08-17T17:14:27Z">
+    <test name="userdelete" duration-ms="9941" started-at="2016-08-24T09:49:39Z" finished-at="2016-08-24T09:49:49Z">
+      <class name="com.wangsy.doTest.UserAddTest">
+        <test-method status="PASS" signature="beforeLogin()[pri:0, instance:com.wangsy.doTest.UserAddTest@6fadae5d]" name="beforeLogin" is-config="true" duration-ms="8220" started-at="2016-08-24T17:49:39Z" finished-at="2016-08-24T17:49:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wangsy.doTest.LoginTest@15bb6bea]" name="testLogin" duration-ms="24847" started-at="2016-08-17T17:14:29Z" data-provider="userLogin" finished-at="2016-08-17T17:14:54Z">
+        <test-method status="PASS" signature="testUserAdd()[pri:0, instance:com.wangsy.doTest.UserAddTest@6fadae5d]" name="testUserAdd" duration-ms="5" started-at="2016-08-24T17:49:47Z" finished-at="2016-08-24T17:49:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserAdd -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.wangsy.doTest.UserAddTest@6fadae5d]" name="quit" is-config="true" duration-ms="1688" started-at="2016-08-24T17:49:47Z" finished-at="2016-08-24T17:49:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.wangsy.doTest.UserAddTest -->
+    </test> <!-- userdelete -->
+    <test name="useradd" duration-ms="16982" started-at="2016-08-24T09:49:39Z" finished-at="2016-08-24T09:49:56Z">
+      <class name="com.wangsy.doTest.UserDeleteTest">
+        <test-method status="PASS" signature="beforeLogin()[pri:0, instance:com.wangsy.doTest.UserDeleteTest@5b464ce8]" name="beforeLogin" is-config="true" duration-ms="15601" started-at="2016-08-24T17:49:39Z" finished-at="2016-08-24T17:49:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeLogin -->
+        <test-method status="PASS" signature="testUserDelete()[pri:0, instance:com.wangsy.doTest.UserDeleteTest@5b464ce8]" name="testUserDelete" duration-ms="1" started-at="2016-08-24T17:49:54Z" finished-at="2016-08-24T17:49:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDelete -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.wangsy.doTest.UserDeleteTest@5b464ce8]" name="quit" is-config="true" duration-ms="1363" started-at="2016-08-24T17:49:54Z" finished-at="2016-08-24T17:49:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.wangsy.doTest.UserDeleteTest -->
+    </test> <!-- useradd -->
+    <test name="login test" duration-ms="25483" started-at="2016-08-24T09:49:39Z" finished-at="2016-08-24T09:50:04Z">
+      <class name="com.wangsy.doTest.LoginTest">
+        <test-method status="PASS" signature="beforeLogin()[pri:0, instance:com.wangsy.doTest.LoginTest@2d209079]" name="beforeLogin" is-config="true" duration-ms="19188" started-at="2016-08-24T17:49:39Z" finished-at="2016-08-24T17:49:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeLogin -->
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wangsy.doTest.LoginTest@2d209079]" name="testLogin" duration-ms="3130" started-at="2016-08-24T17:49:59Z" data-provider="userLogin" finished-at="2016-08-24T17:50:02Z">
           <params>
             <param index="0">
               <value>
@@ -37,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="FAIL" signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wangsy.doTest.LoginTest@15bb6bea]" name="testLogin" duration-ms="3187" started-at="2016-08-17T17:14:54Z" data-provider="userLogin" finished-at="2016-08-17T17:14:57Z">
+        <test-method status="FAIL" signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wangsy.doTest.LoginTest@2d209079]" name="testLogin" duration-ms="802" started-at="2016-08-24T17:50:02Z" data-provider="userLogin" finished-at="2016-08-24T17:50:03Z">
           <params>
             <param index="0">
               <value>
@@ -85,24 +117,20 @@
 	at org.testng.TestRunner.privateRun(TestRunner.java:774)
 	at org.testng.TestRunner.run(TestRunner.java:624)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="FAIL" signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wangsy.doTest.LoginTest@15bb6bea]" name="testLogin" duration-ms="1641" started-at="2016-08-17T17:14:57Z" data-provider="userLogin" finished-at="2016-08-17T17:14:59Z">
+        <test-method status="FAIL" signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wangsy.doTest.LoginTest@2d209079]" name="testLogin" duration-ms="891" started-at="2016-08-24T17:50:03Z" data-provider="userLogin" finished-at="2016-08-24T17:50:04Z">
           <params>
             <param index="0">
               <value>
@@ -150,28 +178,24 @@
 	at org.testng.TestRunner.privateRun(TestRunner.java:774)
 	at org.testng.TestRunner.run(TestRunner.java:624)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.wangsy.doTest.LoginTest@15bb6bea]" name="quit" is-config="true" duration-ms="9483" started-at="2016-08-17T17:14:59Z" finished-at="2016-08-17T17:15:08Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.wangsy.doTest.LoginTest@2d209079]" name="quit" is-config="true" duration-ms="768" started-at="2016-08-24T17:50:04Z" finished-at="2016-08-24T17:50:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.wangsy.doTest.LoginTest -->
-    </test> <!-- Default test -->
+    </test> <!-- login test -->
   </suite> <!-- Default suite -->
 </testng-results>

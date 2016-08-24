@@ -34,12 +34,6 @@ public class ToolsUtil {
 
 	private boolean acceptNextAlert = true;
 
-	/**
-	 * 鍒ゆ柇椤甸潰鍏冪礌鏄惁瀛樺�?
-	 * 
-	 * @param by
-	 * @return boolean
-	 */
 	public boolean isElementExist(By by) {
 		try {
 			driver.findElement(by);
@@ -52,12 +46,6 @@ public class ToolsUtil {
 
 	}
 
-	/**
-	 * 鏍规嵁id瀹氫綅椤甸潰鍏冪�?
-	 * 
-	 * @param id
-	 * @return element
-	 */
 	public WebElement findByID(String id) {
 		WebElement element = null;
 		if (this.isElementExist(By.id(id))) {
@@ -66,12 +54,6 @@ public class ToolsUtil {
 		return element;
 	}
 
-	/**
-	 * 鏍规嵁name瀹氫綅椤甸潰鍏冪�?
-	 * 
-	 * @param name
-	 * @return element
-	 */
 	public WebElement findByName(String name) {
 		WebElement element = null;
 		if (this.isElementExist(By.name(name))) {
@@ -80,12 +62,6 @@ public class ToolsUtil {
 		return element;
 	}
 
-	/**
-	 * 鏍规嵁class瀹氫綅椤甸潰鍏冪�?
-	 * 
-	 * @param ClassName
-	 * @return element
-	 */
 	public WebElement findByClass(String ClassName) {
 		WebElement element = null;
 		if (this.isElementExist(By.name(ClassName))) {
@@ -94,12 +70,6 @@ public class ToolsUtil {
 		return element;
 	}
 
-	/**
-	 * 鏍规嵁LinkText瀹氫綅椤甸潰鍏冪�?
-	 * 
-	 * @param LinkText
-	 * @return
-	 */
 	public WebElement findByLinkText(String LinkText) {
 		WebElement element = null;
 		if (this.isElementExist(By.name(LinkText))) {
@@ -123,12 +93,6 @@ public class ToolsUtil {
 		return element;
 	}
 
-	/**
-	 * 鏌ユ壘鍒楄�?�鍏冪礌鏄惁�?�樺�?
-	 * 
-	 * @param by
-	 * @return boolean
-	 */
 	public boolean elementsExists(By by) {
 		return (driver.findElements(by).size()) > 0 ? true : false;
 	}
@@ -149,18 +113,10 @@ public class ToolsUtil {
 		}
 	}
 
-	/**
-	 * 包含iframe时，�?要切换到iframe进行操作使用�? 该方法用于切换iframe
-	 */
 	public void switchToFrame(WebElement e) {
 		driver.switchTo().frame(driver.findElement(By.className("e")));
 	}
 
-	/**
-	 * 鏍规嵁option涓嬫媺鍒楄�?�鍚嶇О鎵炬壘 鏌ユ壘涓嬫媺灞炴�鍏冪礌浣嶇疆鐐瑰嚮
-	 * @param id
-	 * @return Element
-	 */
 	public WebElement findSelectById(String Text) {
 		WebElement element = null;
 		List<WebElement> options = driver.findElements(By.name(Text));

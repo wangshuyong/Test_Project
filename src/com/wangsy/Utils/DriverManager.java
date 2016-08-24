@@ -17,10 +17,6 @@ public class DriverManager {
 	private DriverManager() {
 	};
 
-	/**
-	 * 濡傛灉褰撳墠杩涚▼娌℃湁缁戝畾driver锛屽垱寤轰竴涓劧鍚庣粦瀹氫笂锛屽鏋滃凡缁忔湁浜嗗氨鐩存帴杩斿�? create a driver
-	 * for this thread if not exist. or return it
-	 */
 	public static ThreadLocal<WebDriver> ThreadDriver = new ThreadLocal<WebDriver>();
 	static WebDriver driver = ThreadDriver.get();
 
@@ -40,11 +36,6 @@ public class DriverManager {
 		driver.quit();
 	}
 
-	/**
-	 * 鎵撳紑�?�瑰簲url鐨勯〉闈�?
-	 * 
-	 * @param url
-	 */
 	public static void openBrowser(String url) {
 		driver.get(url);
 	}
