@@ -5,8 +5,9 @@
 			<pathelement location="lib/testng-6.9.9.jar" />
 		</classpath>
 	</taskdef>
-	<property name="testdir" location="test" />
+	<property name="builddir" location="build" />
 	<property name="srcdir" location="src" />
+	<property name="resultdir" location="test-result" />
 	<property name="libdir" location="lib" />
 	<property name="full-compile" value="true" />
 	<path id="classpath.base" />
@@ -14,28 +15,29 @@
 		<fileset dir="${libdir}">
 			<include name="**/*.jar" />
 		</fileset>
-		<pathelement location="${testdir}" />
+		<pathelement location="${builddir}" />
 		<pathelement location="${srcdir}" />
 		<path refid="classpath.base" />
 	</path>
 	<target name="clean">
 		<delete verbose="${full-compile}">
-			<fileset dir="${testdir}" includes="**/*.class" />
+			<fileset dir="${builddir}" includes="**/*.class" />
 		</delete>
 	</target>
 	<target name="compile" depends="clean">
-		<javac srcdir="${srcdir}" destdir="${testdir}" verbose="${full-compile}">
+		<javac srcdir="${srcdir}" destdir="${builddir}" verbose="${full-compile}">
 			<classpath refid="classpath.test" />
 		</javac>
 	</target>
+	<!-- ,org.uncommons.reportng.JUnitXMLReporter -->
 	<target name="test" depends="compile">
-		<testng outputdir="${testdir}" 
+		<testng outputdir="${resultdir}" 
 			classpathref="classpath.test" 
 			haltonfailure="true" 
 			useDefaultListeners="false" 
-			listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+			listeners="org.uncommons.reportng.HTMLReporter">
 			<xmlfileset dir="${srcdir}" includes="testng-customsuite.xml" />
-			<sysproperty key="org.uncommons.reportng.title" value="My Test Report" />
+			<sysproperty key="org.uncommons.reportng.title" value="自动化测试报告" />
 		</testng>
 	</target>
 </project>
