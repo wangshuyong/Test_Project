@@ -1,10 +1,10 @@
 package com.wangsy.testServise;
 
-import com.wangsy.Utils.ToolsUtil;
+import com.wangsy.Utils.WebdriverLib;
 import com.wangsy.pageOBJ.CompanyManagePageOBJ;
 
 public class CompanyManageService {
-	ToolsUtil eb = new ToolsUtil();
+	WebdriverLib eb = new WebdriverLib();
 	CompanyManagePageOBJ compmPO = new CompanyManagePageOBJ();
 	public HomeService addCompany(String compName,String phone,String contactPeople,String userName,String passWord,String confirmPassWord, String email){
 		eb.clickByElement(compmPO.getCompanyManageSpan());

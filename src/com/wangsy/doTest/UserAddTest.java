@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.wangsy.Utils.BaseTestUtil;
 import com.wangsy.Utils.ConfigurationSettings;
-import com.wangsy.Utils.DriverManager;
+import com.wangsy.Utils.ExplorerDriverManager;
 import com.wangsy.Utils.ExcelUtils;
 import com.wangsy.testServise.HomeService;
 import com.wangsy.testServise.LoginService;

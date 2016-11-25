@@ -5,29 +5,30 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
-import com.wangsy.Utils.ToolsUtil;
-import com.wangsy.Utils.PageBase;
+import com.wangsy.Utils.Locator;
+import com.wangsy.Utils.WebdriverLib;
 
 /**
- * author：王树勇 登录页面对象 页面元素定位
+ * autho:rwangsy
  */
-public class LoginPageObj extends PageBase {
-
-	@FindBy(id = "phone")
-	WebElement usernameBox;
-	@FindBy(id = "password")
-	private WebElement passwordBox;
-	// 鎻愪氦鎸夐挳
-	@FindBy(id = "login")
-	private WebElement submitButton;
-
-	@FindBy(id = "errorMsgId")
-	private WebElement ErroMSG;
-
-	public LoginPageObj(WebDriver driver) {
+public class LoginPageObj extends BasePage{
+	
+	public LoginPageObj(WebDriver driver) throws Exception {
 		super(driver);
 	}
 
+	
+//	@FindBy(id = "phone")
+	public WebElement usernameBox = getElement("loginUsernameInputBox");
+//	@FindBy(id = "password")
+	public WebElement passwordBox = getElement("loginPasswordInputBox");
+	// 鎻愪氦鎸夐挳 
+//	@FindBy(id = "login")
+	public WebElement submitButton = getElement("loginButton");
+
+//	@FindBy(id = "errorMsgId")
+//	private WebElement ErroMSG;
+//
 	public WebElement getUsernameBox() {
 		return usernameBox;
 	}
@@ -51,13 +52,13 @@ public class LoginPageObj extends PageBase {
 	public void setSubmitButton(WebElement submitButton) {
 		this.submitButton = submitButton;
 	}
-
-	public WebElement getErroMSG() {
-		return ErroMSG;
-	}
-
-	public void setErroMSG(WebElement erroMSG) {
-		ErroMSG = erroMSG;
-	}
+//
+//	public WebElement getErroMSG() {
+//		return ErroMSG;
+//	}
+//
+//	public void setErroMSG(WebElement erroMSG) {
+//		ErroMSG = erroMSG;
+//	}
 
 }

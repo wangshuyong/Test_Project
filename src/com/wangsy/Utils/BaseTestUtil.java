@@ -8,13 +8,13 @@ public class BaseTestUtil {
 	private LoginService loginService;
 	private LogoutService logOutService;
 	public void login(String userName, String passWord){
-		loginService = new LoginService(DriverManager.getDriver());
+		loginService = new LoginService(ExplorerDriverManager.getDriver());
 		loginService.loginAsSuccess(userName, passWord);
 	}
 	
 	public void quit(){
-		logOutService = new LogoutService(DriverManager.getDriver());
+		logOutService = new LogoutService(ExplorerDriverManager.getDriver());
 		logOutService.logOut();
-		DriverManager.getDriver().quit();
+		ExplorerDriverManager.getDriver().quit();
 	}
 }

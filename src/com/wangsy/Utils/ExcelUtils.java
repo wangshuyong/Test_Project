@@ -88,7 +88,7 @@ public class ExcelUtils {
 			}
 			return false;
 		} else {
-			// sheet涓嬩竴琛屽唴瀹�?�负绌哄垽�?�氱粨鏉�?
+			// sheet涓嬩竴琛屽唴瀹�?�负绌哄垽�?�氱粨鏉�?
 			if ((ExcelWSheet.getRow(currentRowNo)).getCell(0).equals(""))
 				return false;
 			return true;
@@ -138,7 +138,7 @@ public class ExcelUtils {
 			cellValue = cell.getCellFormula();
 			break;
 		default:
-			cellValue = "�?";
+			cellValue = "空";
 		}
 		return cellValue;
 	}
@@ -168,7 +168,7 @@ public class ExcelUtils {
 	}
 
 	/**
-	 * 获得excel文件的路�?
+	 * 获得excel文件的路�?
 	 * 
 	 * @return
 	 * @throws IOException

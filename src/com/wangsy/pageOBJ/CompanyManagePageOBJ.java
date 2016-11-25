@@ -4,54 +4,52 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
-import com.wangsy.Utils.PageBase;
 /**
- * ¸ÃÀàÖ÷Òª³õÊ¼»¯³¬¼¶¹ÜÀíÔ±ÖÐ Ìí¼Ó¹«Ë¾µÄÒ³ÃæÔªËØ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ ï¿½ï¿½Ó¹ï¿½Ë¾ï¿½ï¿½Ò³ï¿½ï¿½Ôªï¿½ï¿½
  * @author yangsy
  *
  */
 public class CompanyManagePageOBJ extends PageBase{
-	//ÆóÒµ¹ÜÀíµ¼º½ÌõµÄÔªËØ
+	//ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 	@FindBy(how = How.XPATH, using = "//div[@id='tree-area']/div[3]/span[2]")
 	@CacheLookup
 	private WebElement companyManageSpan;
 	
-	//Ìí¼Ó¹«Ë¾°´Å¥ 
+	//ï¿½ï¿½Ó¹ï¿½Ë¾ï¿½ï¿½Å¥ 
 	@FindBy(how = How.CSS, using = "li")
 	@CacheLookup
 	private WebElement addButton;
-	//ÐÞ¸Ä°´Å¥
+	//ï¿½Þ¸Ä°ï¿½Å¥
 	@FindBy(how = How.XPATH, using = "//div[@id='searchDiv']/div[2]/div/ul/li[2]")
 	@CacheLookup
 	private WebElement modifyCompany;
 	
-	//¹«Ë¾Ãû³Æ
+	//ï¿½ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"companyName\"]")
 	@CacheLookup
 	private WebElement companyName;
 	
-	//ÁªÏµµç»°
+	//ï¿½ï¿½Ïµï¿½ç»°
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"phonenumber\"]")
 	@CacheLookup
 	private WebElement phone;
 	
-	//ÁªÏµÈË
+	//ï¿½ï¿½Ïµï¿½ï¿½
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"contactPeople\"]")
 	@CacheLookup
 	private WebElement contactPeople;
 	
-	//´´½¨µÄ¹ÜÀíÔ±ÕËºÅ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Ô±ï¿½Ëºï¿½
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"contactPeople\"]")
 	@CacheLookup
 	private WebElement userName;
 	
-	//´´½¨µÄ¹ÜÀíÔ±ÕËºÅµÄÃÜÂë
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Ô±ï¿½ËºÅµï¿½ï¿½ï¿½ï¿½ï¿½
 	@FindBy(how = How.NAME, using = "userPassword")
 	@CacheLookup
 	private WebElement userPassword;
 		
-	//´´½¨µÄ¹ÜÀíÔ±ÕËºÅ-È·ÈÏÃÜÂë
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Ô±ï¿½Ëºï¿½-È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@FindBy(how = How.NAME, using = "userPasswordConfirm")
 	@CacheLookup
 	private WebElement userPasswordConfirm;
@@ -61,17 +59,17 @@ public class CompanyManagePageOBJ extends PageBase{
 	@CacheLookup
 	private WebElement email;
 	
-	//È·ÈÏ°´Å¥
+	//È·ï¿½Ï°ï¿½Å¥
 	@FindBy(how = How.CSS, using = "#addWnd > div.add-btns > div.button")
 	@CacheLookup
 	private WebElement okButton;
 	
-	//È¡Ïû°´Å¥
+	//È¡ï¿½ï¿½ï¿½ï¿½Å¥
 	@FindBy(how = How.XPATH, using = "//div[@id='addWnd']/div[8]/div[2]")
 	@CacheLookup
 	private WebElement cancelButton;
 	
-	//ÆóÒµ¹ÜÀí-ÏµÍ³¹ÜÀíÔ±µÄiframe
+	//ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½-ÏµÍ³ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½iframe
 	@FindBy(how = How.CLASS_NAME, using = "eb_iframe")
 	@CacheLookup
 	private WebElement iframe;
