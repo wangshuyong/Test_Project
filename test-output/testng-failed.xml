@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="tests">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="tests">
   <listeners>
     <listener class-name="com.wangsy.Utils.ScreenShotListener"/>
   </listeners>
@@ -8,11 +8,23 @@
     <classes>
       <class name="com.wangsy.doTest.LoginTest">
         <methods>
-          <include name="testLogin"/>
+          <include name="testLogin" invocation-numbers="1 2"/>
           <include name="quit"/>
           <include name="beforeLogin"/>
         </methods>
       </class> <!-- com.wangsy.doTest.LoginTest -->
+      <class name="com.wangsy.doTest.UserAddTest">
+        <methods>
+          <include name="quit"/>
+          <include name="beforeLogin"/>
+        </methods>
+      </class> <!-- com.wangsy.doTest.UserAddTest -->
+      <class name="com.wangsy.doTest.UserDeleteTest">
+        <methods>
+          <include name="quit"/>
+          <include name="beforeLogin"/>
+        </methods>
+      </class> <!-- com.wangsy.doTest.UserDeleteTest -->
     </classes>
   </test> <!-- login test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

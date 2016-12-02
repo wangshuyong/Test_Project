@@ -1,2 +1,61 @@
 2016-12-01 17:27:28,493[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 12:01:09,195[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:01:09,225[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 12:01:14,266[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 12:02:21,536[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:02:21,825[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:02:21,888[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:02:24,226[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 12:05:17,261[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:05:17,388[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:05:17,462[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:05:19,106[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 12:10:20,346[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:10:20,440[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:10:20,505[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 12:10:22,188[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:03:40,184[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:03:40,935[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:03:41,011[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:03:45,468[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:04:34,967[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:04:35,089[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:04:35,206[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:04:37,287[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:05:23,028[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:05:23,146[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:05:23,232[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:05:25,436[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:32:16,961[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:32:39,119[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:32:50,804[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:34:46,391[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:34:46,928[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:34:47,023[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:34:48,690[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:36:03,037[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:36:03,041[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:36:03,062[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:36:03,871[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:37:32,432[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:37:36,356[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:37:36,747[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:37:37,197[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:37:37,524[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:37:37,775[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:37:41,686[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:39:48,382[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:39:50,541[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestSuccess(47) | testLogin Success
+    2016-12-02 13:39:50,544[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:39:52,339[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:39:52,437[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestFailure(30) | testLogin Ê§°Ü
+    2016-12-02 13:39:56,546[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 13:43:45,118[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:43:45,192[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:43:45,253[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 13:43:46,850[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
+    2016-12-02 14:14:18,053[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 14:14:18,171[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 14:14:18,252[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onTestStart(53) | testLogin Start
+    2016-12-02 14:14:21,418[CmsTest] INFO [TestNG] com.wangsy.Utils.ScreenShotListener.onFinish(59) | login test Finish
     

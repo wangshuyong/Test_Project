@@ -50,12 +50,13 @@ public class ScreentShot {
 	 */
 	public void takeScreenShot(TakesScreenshot drivername, String path) {
 		File scrFile = drivername.getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(scrFile, new File(path));
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			// log.info("screen shot finished");
-		}
+		
+			try {
+				FileUtils.copyFile(scrFile, new File(path));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 	}
 }

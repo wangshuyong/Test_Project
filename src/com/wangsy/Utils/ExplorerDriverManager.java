@@ -20,47 +20,38 @@ import com.wangsy.testServise.HomeService;
 import com.wangsy.testServise.LoginService;
 
 public class ExplorerDriverManager {
-
+	
 	private ExplorerDriverManager() {
 	};
 
-	public static ThreadLocal<WebDriver> ThreadDriver = new ThreadLocal<WebDriver>();
-	static WebDriver driver = ThreadDriver.get();
-	private static RemoteDriverType DEFAULT_REMOTE_DRIVER_TYPE = RemoteDriverType.Firefox;
-	private static LocalDriverType DEFAULT_LOCAL_DRIVER_TYPE = LocalDriverType.Firefox;
+	private static ThreadLocal<WebDriver> ThreadDriver = new ThreadLocal<WebDriver>();
+	private static  RemoteDriverType DEFAULT_REMOTE_DRIVER_TYPE = RemoteDriverType.Firefox;//init
+	private static  LocalDriverType DEFAULT_LOCAL_DRIVER_TYPE = LocalDriverType.Firefox;//init
 
 	public static WebDriver getDriver() {
-
+		WebDriver driver = ThreadDriver.get();
 		if (driver == null) {
-
+			//driver type is remote
 			if("remote".equals(ConfigurationSettings.getProperty("DRIVERLOCATION"))){
 				RemoteDriverType type = DEFAULT_REMOTE_DRIVER_TYPE;
 				type = Enum.valueOf(RemoteDriverType.class,ConfigurationSettings.WEBDRIVER_TYPE);
 				driver = type.getDriver();
+				ThreadDriver.set(driver);
+				//driver type is local
 			}else if("local".equals(ConfigurationSettings.getProperty("DRIVERLOCATION"))) {
-				
 				LocalDriverType localType = DEFAULT_LOCAL_DRIVER_TYPE;
 				try {
-					localType = Enum.valueOf(LocalDriverType.class,
-							ConfigurationSettings.WEBDRIVER_TYPE);
+					localType = Enum.valueOf(LocalDriverType.class,ConfigurationSettings.WEBDRIVER_TYPE);
 				} catch (Exception ex) {
 				}
 				driver = localType.getDriver();
+				ThreadDriver.set(driver);
 			}
-
 			driver.get(ConfigurationSettings.getProperty("baseUrl"));
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
 		}
 		return driver;
 	}
-
-	public static void quit() {
-		driver.manage().timeouts()
-				.implicitlyWait(3, TimeUnit.SECONDS);
-		driver.quit();
-	}
-
-	public static void openBrowser(String url) {
-		driver.get(url);
-	}
+	
 }

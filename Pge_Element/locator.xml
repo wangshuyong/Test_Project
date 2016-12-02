@@ -2,15 +2,15 @@
 
 <map>
     <!--locator of page map info -->
-    <page pageName="com.wangsy.pageOBJ。LoginPageObj.HomePageOBJ">
+    <page pageName="com.wangsy.pageOBJ.HomePageObj">
         <!--Locator lists -->
-        <locator type="ByXpath" timeOut="3" value="//div[@class='top-nav-profile']//img[@class='avatar']">profile</locator>
+        <locator type="xpath" timeOut="3" value="//div[@id='user-nav']/ul/li[4]/a/span">logout</locator>
     </page>
     <!--locator of page map info -->
     <page pageName="com.wangsy.pageOBJ.LoginPageObj">
         <!--Locator lists -->
-        <locator type="id" timeOut="3" value="phone">loginUsernameInputBox</locator>
+        <locator type="id" timeOut="3" value="phone">loginUsername</locator>
         <locator type="id" timeOut="3" value="login">loginButton</locator>
-        <locator type="id" timeOut="3" value="password">loginPasswordInputBox</locator>
+        <locator type="id" timeOut="3" value="password">loginPassword</locator>
     </page>
 </map>

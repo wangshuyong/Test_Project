@@ -25,27 +25,26 @@ public class LoginTest {
 				ConfigurationSettings.getProperty("logincasefile"),
 				ConfigurationSettings.getProperty("test_login_data"));
 	}
-  
+
 	@Test(dataProvider = "userLogin")
-	public void testLogin(String userName, String passWord, String flag,   
+	public void testLogin(String userName, String passWord, String flag,
 			String expected) throws Exception {
+
 		if ("f".equals(flag)) {
 			loginService.loginAsFail(userName, passWord);
-//			Assert.assertEquals(expected, loginService.getElementPresent());
-//			Assertion.verifyEquals(expected, loginService.getElementPresent());
+			// Assert.assertEquals(expected, loginService.getElementPresent());
 		} else if ("t".equals(flag)) {
 			loginService.loginAsSuccess(userName, passWord);
-//			Assert.assertEquals(expected, homeService.getElementPresent());
+			homeService = new HomeService(ExplorerDriverManager.getDriver());
+			logOutService = new LogoutService(ExplorerDriverManager.getDriver());
 			Assertion.verifyEquals(expected, homeService.getElementPresent());
 			logOutService.logOut();
 		}
 	}
 
-	@BeforeTest(alwaysRun = true)  
+	@BeforeTest(alwaysRun = true)
 	public void beforeLogin() {
 		loginService = new LoginService(ExplorerDriverManager.getDriver());
-		logOutService = new LogoutService(ExplorerDriverManager.getDriver());
-		homeService = new HomeService(ExplorerDriverManager.getDriver());
 	}
 
 	@AfterTest(alwaysRun = true)

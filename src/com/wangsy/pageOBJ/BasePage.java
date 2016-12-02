@@ -11,6 +11,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,18 +26,18 @@ public class BasePage {
 
 	protected WebDriver driver;
 	private HashMap<String, Locator> locatorMap;
-	private XmlDocument xmlRead;
-
+	private XmlDocument xmlRead = new XmlUtils();;
+	private final int TIMEOUT = 10;
+	public BasePage(){
+		
+	}
 	protected BasePage(WebDriver driver) {
 		this.driver = driver;
-		xmlRead = new XmlUtils();
-
-		locatorMap = xmlRead.readXMLDocument(ConfigurationSettings
-				.getProperty("path"), this.getClass().getCanonicalName());
-
+		locatorMap = xmlRead.readXMLDocument(ConfigurationSettings.getProperty("path"), this.getClass().getCanonicalName());
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, TIMEOUT), this);
 	}
 
-	public Locator getLocator(String locatorName) throws IOException {
+	public Locator getLocator(String locatorName) {
 		Locator locator = locatorMap.get(locatorName);
 		if (locator == null) {
 			locator = new Locator(locatorName);
@@ -43,7 +45,7 @@ public class BasePage {
 		return locator;
 	}
 
-	public WebElement getElement(String locatorName) throws IOException {
+	public WebElement getElement(String locatorName)  {
 		return getElement(this.getDriver(), locatorName);
 	}
 
@@ -57,7 +59,7 @@ public class BasePage {
 	 * @throws IOException
 	 */
 	public WebElement getElement(WebDriver driver, String locatorName)
-			throws IOException {
+			 {
 		Locator locator = getLocator(locatorName);
 
 		WebElement e;

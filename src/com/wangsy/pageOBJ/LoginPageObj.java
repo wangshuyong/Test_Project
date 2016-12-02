@@ -9,16 +9,16 @@ import com.wangsy.Utils.Locator;
 import com.wangsy.Utils.WebdriverLib;
 
 /**
- * autho:rwangsy
+ * auth:rwangsy
  */
 public class LoginPageObj extends BasePage{
 	
-	public LoginPageObj(WebDriver driver) throws Exception {
+	public LoginPageObj(WebDriver driver) {
 		super(driver);
 	}
 	
-	public WebElement usernameBox = getElement("loginUsernameInputBox");
-	public WebElement passwordBox = getElement("loginPasswordInputBox");
+	public WebElement usernameBox = getElement("loginUsername");
+	public WebElement passwordBox = getElement("loginPassword");
 	public WebElement submitButton = getElement("loginButton");
 
 	public WebElement getUsernameBox() {
