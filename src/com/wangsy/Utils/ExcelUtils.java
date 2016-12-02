@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -27,19 +29,23 @@ public class ExcelUtils {
 	public ExcelUtils() {
 		
 	}
-
+	private Log logger = LogFactory.getLog(this.getClass());
+	
 	@SuppressWarnings({ "null", "resource" })
 	public Collection<Object> ReadExcelFile(String filePath, String sSheetName) {
 		List<Object> rows = new ArrayList<Object>();
 		List<Object> rowData = new ArrayList<Object>();
-		try {
-			fis = new FileInputStream(filePath);
-			ExcelWBook = new XSSFWorkbook(fis);
+	
+			try {
+				fis = new FileInputStream(filePath);
+				ExcelWBook = new XSSFWorkbook(fis);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
 			ExcelWSheet = ExcelWBook.getSheet(sSheetName);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		// return cellNovalue;
+		
 		for (int r = 0; r < ExcelWSheet.getPhysicalNumberOfRows(); r++) {
 			int numberOfColumns = countNonEmptyColumns(ExcelWSheet);
 			row = ExcelWSheet.getRow(r);
@@ -88,7 +94,6 @@ public class ExcelUtils {
 			}
 			return false;
 		} else {
-			// sheet涓嬩竴琛屽唴瀹�?�负绌哄垽�?�氱粨鏉�?
 			if ((ExcelWSheet.getRow(currentRowNo)).getCell(0).equals(""))
 				return false;
 			return true;
@@ -138,7 +143,7 @@ public class ExcelUtils {
 			cellValue = cell.getCellFormula();
 			break;
 		default:
-			cellValue = "空";
+			cellValue = "null";
 		}
 		return cellValue;
 	}
@@ -168,7 +173,6 @@ public class ExcelUtils {
 	}
 
 	/**
-	 * 获得excel文件的路�?
 	 * 
 	 * @return
 	 * @throws IOException

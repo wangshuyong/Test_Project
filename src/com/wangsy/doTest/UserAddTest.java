@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.wangsy.Utils.BaseTestUtil;
+import com.wangsy.Utils.LogInOut;
 import com.wangsy.Utils.ConfigurationSettings;
 import com.wangsy.Utils.ExplorerDriverManager;
 import com.wangsy.Utils.ExcelUtils;
@@ -17,13 +17,7 @@ import com.wangsy.testServise.LogoutService;
 
 public class UserAddTest {
 
-	BaseTestUtil baseTest = new BaseTestUtil();
-	@DataProvider(name = "userLogin")
-	public Object[][] rangeData() {
-		return new ExcelUtils().getDataForTestNG(
-				ConfigurationSettings.getProperty("logincasefile"),
-				ConfigurationSettings.getProperty("test_login_data"));
-	}
+	LogInOut baseTest = new LogInOut();
 
 	@Test
 	public void testUserAdd() throws Exception {

@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.wangsy.Utils.ScreenShotListener"/>
+  </listeners>
+  <test name="login test(failed)" parallel="tests">
     <classes>
       <class name="com.wangsy.doTest.LoginTest">
         <methods>
-          <include name="testLogin" invocation-numbers="1 2"/>
+          <include name="testLogin"/>
           <include name="quit"/>
           <include name="beforeLogin"/>
         </methods>
       </class> <!-- com.wangsy.doTest.LoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- login test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

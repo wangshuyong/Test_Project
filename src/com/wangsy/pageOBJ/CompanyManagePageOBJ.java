@@ -5,51 +5,41 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 /**
- * ������Ҫ��ʼ����������Ա�� ��ӹ�˾��ҳ��Ԫ��
  * @author yangsy
  *
  */
 public class CompanyManagePageOBJ extends PageBase{
-	//��ҵ����������Ԫ��
 	@FindBy(how = How.XPATH, using = "//div[@id='tree-area']/div[3]/span[2]")
 	@CacheLookup
 	private WebElement companyManageSpan;
 	
-	//��ӹ�˾��ť 
 	@FindBy(how = How.CSS, using = "li")
 	@CacheLookup
 	private WebElement addButton;
-	//�޸İ�ť
 	@FindBy(how = How.XPATH, using = "//div[@id='searchDiv']/div[2]/div/ul/li[2]")
 	@CacheLookup
 	private WebElement modifyCompany;
 	
-	//��˾����
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"companyName\"]")
 	@CacheLookup
 	private WebElement companyName;
 	
-	//��ϵ�绰
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"phonenumber\"]")
 	@CacheLookup
 	private WebElement phone;
 	
-	//��ϵ��
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"contactPeople\"]")
 	@CacheLookup
 	private WebElement contactPeople;
 	
-	//�����Ĺ���Ա�˺�
 	@FindBy(how = How.CSS, using = "div.input-group > input[name=\"contactPeople\"]")
 	@CacheLookup
 	private WebElement userName;
 	
-	//�����Ĺ���Ա�˺ŵ�����
 	@FindBy(how = How.NAME, using = "userPassword")
 	@CacheLookup
 	private WebElement userPassword;
 		
-	//�����Ĺ���Ա�˺�-ȷ������
 	@FindBy(how = How.NAME, using = "userPasswordConfirm")
 	@CacheLookup
 	private WebElement userPasswordConfirm;
@@ -59,17 +49,14 @@ public class CompanyManagePageOBJ extends PageBase{
 	@CacheLookup
 	private WebElement email;
 	
-	//ȷ�ϰ�ť
 	@FindBy(how = How.CSS, using = "#addWnd > div.add-btns > div.button")
 	@CacheLookup
 	private WebElement okButton;
 	
-	//ȡ����ť
 	@FindBy(how = How.XPATH, using = "//div[@id='addWnd']/div[8]/div[2]")
 	@CacheLookup
 	private WebElement cancelButton;
 	
-	//��ҵ����-ϵͳ����Ա��iframe
 	@FindBy(how = How.CLASS_NAME, using = "eb_iframe")
 	@CacheLookup
 	private WebElement iframe;

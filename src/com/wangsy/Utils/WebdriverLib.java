@@ -24,78 +24,7 @@ public class WebdriverLib {
 		this.driver = driver;
 	}
 
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
-	}
-
 	private boolean acceptNextAlert = true;
-
-	public boolean isElementExist(By by) {
-		try {
-			driver.findElement(by);
-			return true;
-
-		} catch (NoSuchElementException e) {
-			// TODO: handle exception
-			return false;
-		}
-
-	}
-
-	public WebElement findByID(String id) {
-		WebElement element = null;
-		if (this.isElementExist(By.id(id))) {
-			element = driver.findElement(By.id(id));
-		}
-		return element;
-	}
-
-	public WebElement findByName(String name) {
-		WebElement element = null;
-		if (this.isElementExist(By.name(name))) {
-			element = driver.findElement(By.name(name));
-		}
-		return element;
-	}
-
-	public WebElement findByClass(String ClassName) {
-		WebElement element = null;
-		if (this.isElementExist(By.name(ClassName))) {
-			element = driver.findElement(By.name(ClassName));
-		}
-		return element;
-	}
-
-	public WebElement findByLinkText(String LinkText) {
-		WebElement element = null;
-		if (this.isElementExist(By.name(LinkText))) {
-			element = driver.findElement(By.name(LinkText));
-		}
-		return element;
-	}
-
-	/**
-	 * 鏍规嵁鍏冪礌index鑾峰彇鍏蜂綋鍏冪礌浣嶇疆
-	 * 
-	 * @param by
-	 * @param index
-	 * @return element
-	 */
-	public WebElement FindByElements(By by, int index) {
-		WebElement element = null;
-		if (this.isElementExist(by)) {
-			element = driver.findElements(by).get(index);
-		}
-		return element;
-	}
-
-	public boolean elementsExists(By by) {
-		return (driver.findElements(by).size()) > 0 ? true : false;
-	}
 
 	/**
 	 * 绐楀彛鍒囨崲
@@ -114,19 +43,9 @@ public class WebdriverLib {
 	}
 
 	public void switchToFrame(WebElement e) {
-		driver.switchTo().frame(driver.findElement(By.className("e")));
+		driver.switchTo().frame(e);
 	}
 
-	public WebElement findSelectById(String Text) {
-		WebElement element = null;
-		List<WebElement> options = driver.findElements(By.name(Text));
-		for (int i = 0; i < options.size(); i++) {
-			if (options.get(i).getText().equals(Text)) {
-				options.get(i).click();
-			}
-		}
-		return element;
-	}
 
 	private String closeAlertAndGetItsText() {
 		try {

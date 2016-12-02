@@ -4,10 +4,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.wangsy.Utils.BaseTestUtil;
+import com.wangsy.Utils.LogInOut;
 
 public class UserDeleteTest {
-	BaseTestUtil baseTest = new BaseTestUtil();
+	LogInOut baseTest = new LogInOut();
   @Test
   public void testUserDelete() {
 	  System.out.println("Test user delete !!!");

@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Default suite" parallel="tests" thread-count="3" >
+<suite name="Default suite" parallel="tests" thread-count="3">
+	<listeners>
+		<listener class-name="com.wangsy.Utils.ScreenShotListener" />
+	</listeners>
 
-  
-  <test name="login test">
-    <classes>
-      <class name="com.wangsy.doTest.LoginTest" />
-    </classes>
-  </test>  
-  <!-- 
-  <test name="useradd" >
-    <classes>
-      <class name="com.wangsy.doTest.UserDeleteTest" />
-    </classes>
-  </test>  
-  <test name="userdelete">
-    <classes>
-      <class name="com.wangsy.doTest.UserAddTest" />
-    </classes>
-  </test>  -->
+	<test name="login test">
+		<classes>
+			<class name="com.wangsy.doTest.LoginTest" />
+		</classes>
+	</test>
+	<!-- <test name="useradd" > <classes> <class name="com.wangsy.doTest.UserDeleteTest" 
+		/> </classes> </test> <test name="userdelete"> <classes> <class name="com.wangsy.doTest.UserAddTest" 
+		/> </classes> </test> -->
 </suite>

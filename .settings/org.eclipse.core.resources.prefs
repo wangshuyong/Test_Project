@@ -3,4 +3,6 @@ encoding//src/com/wangsy/Utils/ConfigurationSettings.java=UTF-8
 encoding//src/com/wangsy/Utils/ExcelUtils.java=UTF-8
 encoding//src/com/wangsy/Utils/ExplorerDriverManager.java=UTF-8
 encoding//src/com/wangsy/Utils/WebdriverLib.java=UTF-8
+encoding//src/log4j.properties=UTF-8
 encoding/<project>=UTF-8
+separateDerivedEncodings=true

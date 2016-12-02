@@ -25,14 +25,8 @@ public class ConfigurationSettings {
         return props.getProperty(propertyName).trim();
     }
 
-    /**
-     * WebDriver绫诲�?
-     */
     public static final String WEBDRIVER_TYPE = getProperty("webdriver.type");
 
-    /**
-     * IEdriver鐨勮矾寰�?
-     */
     public static final String WEBDRIVER_IE_DRIVER_PATH = getProperty("webdriver.ie.driver.path");
     public static final String WEBDRIVER_CHROME_DRIVER_PATH  = getProperty("webdriver.chrome.driver.path");
     public static final String WEBDRIVER_FIREFOX_DRIVER_PATH  = getProperty("webdriver.Firefox.driver.path");

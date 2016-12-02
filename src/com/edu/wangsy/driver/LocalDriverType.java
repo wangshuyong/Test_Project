@@ -55,7 +55,6 @@ public enum LocalDriverType {
 			if (!StringUtils
 					.isEmpty(ConfigurationSettings.WEBDRIVER_CHROME_DRIVER_PATH)) {
 				System.setProperty("webdriver.chrome.driver", ConfigurationSettings.WEBDRIVER_CHROME_DRIVER_PATH); 
-				//设置Webdriver启动chrome为默认用户的配置信息（包括书签、扩展程序等）
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("user-data-dir=C:/Users/yangsy/AppData/Local/Google/Chrome/User Data/Default");
 			}

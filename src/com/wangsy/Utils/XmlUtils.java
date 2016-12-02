@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -18,15 +20,16 @@ import org.dom4j.io.XMLWriter;
 import com.wangsy.Utils.Locator.ByType;
 
 public class XmlUtils implements XmlDocument {
+	private Log logger = LogFactory.getLog(this.getClass());
 
 	public HashMap<String, Locator> readXMLDocument(String path, String pageName) {
-		System.out.print(pageName);
 		HashMap<String, Locator> locatorMap = new HashMap<String, Locator>();
 		locatorMap.clear();
 		File file = new File(path);
 		SAXReader reader = new SAXReader();
 		Document document = null;
 		if (!file.exists()) {
+			logger.error(file + " : is not exist  !!!");
 			return null;
 		}
 
@@ -34,7 +37,7 @@ public class XmlUtils implements XmlDocument {
 			document = reader.read(file);
 		} catch (DocumentException e) {
 			e.printStackTrace();
-		}
+		} 
 		Element root = document.getRootElement();
 		for (Iterator<?> i = root.elementIterator(); i.hasNext();) {
 			Element page = (Element) i.next();

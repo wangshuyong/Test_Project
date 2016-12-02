@@ -1,6 +1,9 @@
 package com.wangsy.testServise;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
+
 import com.wangsy.Utils.*;
 import com.wangsy.pageOBJ.LoginPageObj;
 
@@ -8,6 +11,7 @@ public class LoginService {
 	private WebDriver driver;
 	private LoginPageObj lpo;
 	private WebdriverLib eb;
+	private  Log logger = LogFactory.getLog(this .getClass());
 
 	public LoginService() {
 	}
@@ -18,8 +22,8 @@ public class LoginService {
 			lpo = new LoginPageObj(driver);
 			eb = new WebdriverLib(driver);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+//			logger.info(e.printStackTrace());
 		}
 		
 	}
